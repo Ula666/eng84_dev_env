@@ -36,4 +36,41 @@
 - Culture
 
 
+## DevOps Principles
+- Customer - Cnetric Action
+- End-to-end Responsibility
+- Continous Improvement
+- Automate everything
+
+## Stages in DevOps Lifecycle
+- Continuous Development
+- Continuous Testing
+- Continuous Integration
+- Continuous Deployment
+- Continuous Monitoring
+
+
+## DevOps Tools: 
+- Chef
+- Ansible
+- git
+- sensu
+- jenkins
+- bamboo
+- nagios
+- puppet
+- saltstack
+- gradle
+- maven
+- eclipse
+
+## DevOps implementation:
+- cloud platform (AWS, GCP, Azure)
+- infrastructure architecture ( virtualization, containerization)
+- DevOps implementations (IaC, IaaS, IaaP, infrastructure as a product)
+
+
+
+
+
 
