@@ -73,4 +73,46 @@
 
 
 
+### vagrant commands:
+- `vagrant up` to open Virtual Machine
+- `vagrant status` checks the status of Vagrant
+- `vagrant reload` to reload machine
+- `vagrant halt` to close the Virtual Machine
+
+
+### Linux commands:
+- `apt-get` to install updates/packages
+- `cat filename` to display the file content
+- `mkdir directoryname` to create a new 
+directory(folder)
+- `rmdir directoryname` deletes the directory
+- `clear` to clear the current screen
+- `nano filename` to create a new file
+- `cd directoryname` moves to this directory
+- `cd ..` go back to previous directory 
+- `cd` to go back to home
+- `ls` shows files in current directory, `la -a` shows also the hidden files
+- `uname` who am I
+- `sudo` is used to run commands as an admin
+- `sudo su` to go into admin mode
+- `pwd` where am I, print current location
+- `sudo apt-get update -y` update command, y says yes
+- `sudo apt-get upgrade -y` update command
+- `mv README.md MYREADME.md` to rename a file we have to move a file and add it a new name
+- `cp MYREADME.md devops/MYREADME.md` to copy readmy files to devops folder
+- `rm MYREADME.md` to remove a file
+
+- chmod permision 700, 400, u, x(execute) , w(write), r(read)
+- `chmod +x provision.sh` to give permission to a file
+- `./provision.sh` to run 
+- `ll` to check permissions
+- `top` to check current processes running
+- `ps` check process `ps aux` same but with user permissions
+
+### install web server NGINX
+- `sudo apt-get install nginx`
+- `systemctl status nginx` check if the nqinx has been installed
+- 
+
+
 
