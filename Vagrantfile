@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
     db.vm.network "private_network", ip: "192.168.10.101" #different ip
     db.hostsupdater.aliases = ["development.local"]
 	db.vm.synced_folder ".", "/home/vagrant/app"
-	db.vm.provision "shell", path: "environment/provision.sh"
+	db.vm.provision "shell", path: "environment/provision_db.sh"
 	#db.vm.network "forwarded_port", guest: 27017, host: 27017
 
  end
