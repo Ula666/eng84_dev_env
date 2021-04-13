@@ -114,5 +114,8 @@ directory(folder)
 - `systemctl status nginx` check if the nqinx has been installed
 - 
 
+### updates to alias ip with logical web address
+- `vagrant plugin uninstall vagrant-hostsupdater`
+- `vagrant plugin install vagrant-hostsupdater --plugin-version=1.0.2`
 
 
