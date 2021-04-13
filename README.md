@@ -119,3 +119,46 @@ directory(folder)
 - `vagrant plugin install vagrant-hostsupdater --plugin-version=1.0.2`
 
 
+### Let's run the tests on our hosts machine and pass the tests by installing the required dependencies
+
+
+### Let's automate the installation of required dependencies in our vagrant file to run our script
+
+- add shell script path to our Vagrantfile 
+- `config.vm.provision "shell", path: "environment/provision.sh"`
+
+### To check the connection:
+- `http://development.local:3000`
+- `http://development.local:3000/fibonacci/4`
+
+### Let's create our script:
+```
+#!/bin/bash
+
+# run the update command
+sudo apt-get update -y
+
+# upgrade
+sudo apt-get upgrade -y
+
+# install nginx
+sudo apt-get install nginx -y
+
+# install nodejs with required version and dependencies
+sudo apt-get install python-software-properties
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install nodejs -y
+
+# install npm with pm2 -g
+sudo npm install pm2 -g
+
+```
+
+
+
+
+### MONGODB:
+- `sudo systemctl start mongod` to start the database
+- `sudo systemctl status mongod` to check the status
+- `sudo systemctl stop mongod` to stop the database
+
