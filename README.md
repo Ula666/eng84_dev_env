@@ -119,9 +119,6 @@ directory(folder)
 - `vagrant plugin install vagrant-hostsupdater --plugin-version=1.0.2`
 
 
-### Let's run the tests on our hosts machine and pass the tests by installing the required dependencies
-
-
 ### Let's automate the installation of required dependencies in our vagrant file to run our script
 
 - add shell script path to our Vagrantfile 
@@ -184,15 +181,30 @@ sudo npm install pm2 -g
  end
 ```
 
-
-
-
 ### MONGODB:
 - `sudo systemctl start mongod` to start the database
 - `sudo systemctl status mongod` to check the status
 - `sudo systemctl stop mongod` to stop the database
 
-
-
 ### to update the seed
 - `node seeds/seed.js `
+
+
+
+
+## Linux varaiables and Env var 
+- `env`, `printenv` to check the enviroment
+- to create enviroment example: `export DEVOPS=Engineering84`
+- export is the keyword to create an env variable
+- as key=value, key="sme other value"
+- key = value1:value2
+- What are the system default env variables? `USER`, `HOME`, `PATH`, `TERM`
+- `echo `
+- `export ENG_VAR="Engineering84"` to create env var
+- `cat ~/.profile` to make var persistent
+
+- to make variable persistent we have to save in ~/.bashrc file
+- `sudo nano ~/.bashrc` 
+- `export [VARIABLE_NAME]=[variable_value]`
+
+
