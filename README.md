@@ -199,7 +199,6 @@ sudo npm install pm2 -g
 - as key=value, key="sme other value"
 - key = value1:value2
 - What are the system default env variables? `USER`, `HOME`, `PATH`, `TERM`
-- `echo `
 - `export ENG_VAR="Engineering84"` to create env var
 - `cat ~/.profile` to make var persistent
 
