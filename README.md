@@ -156,9 +156,9 @@ sudo npm install pm2 -g
 
 
 ## Added multiple VMs (db and app)
-### the code for the Vagrant file:
+### Vagrantfile
+- the app:
 ```
-Vagrant.configure("2") do |config|
  config.vm.define "app" do |app|
 	# Creating a virtual machine ubuntu 16.04
 	 app.vm.box = "ubuntu/xenial64"
@@ -173,15 +173,15 @@ Vagrant.configure("2") do |config|
 	 #app.vm.provision "shell", inline: 'set_env({ DB_HOST: "mongodb://192.168.10.150:27017/posts" })', privileged: false
 	 app.vm.provision "shell", inline: 'sudo echo "export DB_HOST=mongodb://192.168.10.101:27017/posts" >> /etc/profile.d/myvars.sh', run: "always"
  end
-
+```
+- the database:
+```
  config.vm.define "db" do |db|
     db.vm.box = "ubuntu/xenial64"
     db.vm.network "private_network", ip: "192.168.10.101" #different ip
 	db.vm.synced_folder ".", "/home/vagrant/app"
 	db.vm.provision "shell", path: "environment/provision_db.sh"
  end
-
-end
 ```
 
 
