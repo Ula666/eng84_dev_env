@@ -18,5 +18,5 @@ sudo apt-get install nodejs -y
 # install npm with pm2 -g
 sudo npm install pm2 -g
 
-sudo npm install /home/vagrant/app
-sudo nodejs /home/vagrant/app/seeds/seed.js
+sudo npm install /home/vagrant/app/app
+sudo nodejs /home/vagrant/app/app/seeds/seed.js
