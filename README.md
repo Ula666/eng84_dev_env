@@ -188,11 +188,11 @@ sudo npm install pm2 -g
 
 ### to update the seed
 - `node seeds/seed.js `
+- `vagrant plugin install vagrant-hostsupdater`
 
 
 
-
-## Linux varaiables and Env var 
+## Linux varaiables and Env variables
 - `env`, `printenv` to check the enviroment
 - to create enviroment example: `export DEVOPS=Engineering84`
 - export is the keyword to create an env variable
@@ -205,5 +205,37 @@ sudo npm install pm2 -g
 - to make variable persistent we have to save in ~/.bashrc file
 - `sudo nano ~/.bashrc` 
 - `export [VARIABLE_NAME]=[variable_value]`
+- `echo "export DB_HOST=mongodb://192.168.10.101:27017/posts" >> ~/.bashrc` the other way to make variable persistent
+
+
+
+### Reverse Proxy with NGINX
+- what is the default location of our nginx file that loads the nginx page
+- `cd /etc/nginx/sites-available/`
+- `nano /etc/nginx/sites-available/default`
+- we need to use the default file in the same location to add our code to use it as our reverse proxy
+
+
+
+### Commands to set 
+- `sudo rm default`      
+- `sudo nano default` 
+- Edited the "default" file, so we don't need to specify port number to load the page
+```
+server {
+	listen 80;
+
+	server_name _;
+
+	location / {
+		proxy_pass http://localhost:3000;
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection 'upgrade';
+		proxy_set_header Host $host;
+		proxy_cache_bypass $http_upgrade;
+	}
+}
+```
 
 
